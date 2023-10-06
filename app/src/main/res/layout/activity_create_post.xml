@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?background"
+    tools:context=".Activity.Create_Post_Activity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/createPostUserImage"
+        android:layout_width="@dimen/_70dp"
+        android:layout_height="@dimen/_70dp"
+        android:layout_margin="@dimen/_10dp"
+        android:src="@drawable/place_holder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/createPostUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:layout_marginStart="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/createPostUserImage"
+        app:layout_constraintStart_toEndOf="@+id/createPostUserImage"
+        app:layout_constraintTop_toTopOf="@+id/createPostUserImage" />
+
+    <EditText
+        android:id="@+id/createPostEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/write_here"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:minHeight="48dp"
+        android:padding="@dimen/_10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPostUserImage" />
+
+
+    <Button
+        android:id="@+id/postBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="@string/post"
+        android:layout_marginTop="@dimen/_10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/createPostEdittext"
+        app:layout_constraintStart_toStartOf="@+id/createPostEdittext"
+        app:layout_constraintTop_toBottomOf="@+id/createPostEdittext" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_8dp"
+        android:elevation="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?background"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/_8dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="@dimen/_50dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_margin="@dimen/_4dp"
+                android:src="@drawable/place_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/recyclerUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10dp"
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackground"
+                android:textColor="?android:textColor"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintStart_toEndOf="@+id/userImage"
+                app:layout_constraintTop_toTopOf="@+id/userImage"
+                android:focusable="true" />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:layout_marginStart="@dimen/_8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/recyclerUserName"
+                app:layout_constraintStart_toEndOf="@+id/recyclerUserName"
+                app:layout_constraintTop_toTopOf="@+id/recyclerUserName"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/lottie_haha" />
+
+            <TextView
+                android:id="@+id/optionMenuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15dp"
+                android:text="@string/_8942"
+                android:clickable="true"
+                android:textAppearance="?android:textAppearanceLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/postedDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?android:textColor"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintStart_toStartOf="@+id/recyclerUserName"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerUserName" />
+
+            <TextView
+                android:id="@+id/jokeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.01"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:textColor="?android:textColor"
+                android:textSize="@dimen/_24sp"
+                app:layout_constraintTop_toBottomOf="@+id/userImage"
+                android:layout_marginTop="@dimen/_10dp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:background="?textFillColor"
+                app:layout_constraintTop_toBottomOf="@+id/jokeText" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:padding="@dimen/_4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                <com.amrdeveloper.reactbutton.ReactButton
+                    android:id="@+id/reactionBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg"
+                    android:backgroundTint="@color/blue"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg"
+                    android:text="@string/share"
+                    android:drawableTop="@drawable/share_icon"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuSavePost"
+        app:showAsAction="ifRoom"
+        android:title="@string/save_post"
+        android:icon="@drawable/ic_save_post"/>
+
+    <item
+        android:id="@+id/menuDontWantToSee"
+        app:showAsAction="ifRoom"
+        android:title="@string/i_don_t_want_to_see_their_posts"
+        android:icon="@drawable/ic_unseen_post"/>
+
+    <item
+        android:id="@+id/menuReportUser"
+        app:showAsAction="ifRoom"
+        android:title="@string/report_user"
+        android:icon="@drawable/ic_report"/>
+
+
+</menu>

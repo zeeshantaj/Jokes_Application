@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeIcon"
+        android:icon="@drawable/home"
+        android:title="Feed"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/requestIcon"
+        android:icon="@drawable/request"
+        android:title="Jokeriend Request"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/notificationIcon"
+        android:icon="@drawable/notification"
+        android:title="notification"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/profileIcon"
+        android:icon="@drawable/profile"
+        android:title="profile"
+        app:showAsAction="ifRoom" />
+</menu>

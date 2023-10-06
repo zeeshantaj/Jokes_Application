@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/fragment_profile_scene2"
+    tools:context=".Fragment.ProfileFragment">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="@dimen/_200dp"
+        android:layout_height="@dimen/_200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/place_holder"
+        app:civ_border_width="@dimen/_2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_200dp"
+        android:textColor="?android:textColor"
+        android:textSize="@dimen/_24sp"
+        app:drawableEndCompat="@drawable/pencil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewProfile" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/profileVerification"
+        android:layout_width="@dimen/_24dp"
+        android:layout_height="@dimen/_24dp"
+        android:layout_marginStart="@dimen/_4dp"
+        app:layout_constraintBottom_toBottomOf="@id/nameProfile"
+        app:layout_constraintStart_toEndOf="@id/nameProfile"
+        app:layout_constraintTop_toTopOf="@id/nameProfile"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_haha" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userProfileRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

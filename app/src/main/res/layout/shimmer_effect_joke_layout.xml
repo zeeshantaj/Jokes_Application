@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4dp"
+        android:background="?textFillColor"
+        android:elevation="@dimen/_4dp"
+        app:cardCornerRadius="@dimen/_4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/aldsm"
+                android:layout_width="@dimen/_50dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_margin="@dimen/_10dp"
+                android:background="@drawable/grey_circle"
+                app:civ_border_color="@color/grey"
+                app:civ_border_width="@dimen/_1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/das1"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/grey"
+                android:padding="@dimen/_15dp"
+                android:textColor="?android:textColor"
+                app:layout_constraintStart_toEndOf="@+id/aldsm"
+                app:layout_constraintTop_toTopOf="@+id/aldsm" />
+
+            <TextView
+                android:id="@+id/dsa"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:background="@color/grey"
+                android:padding="@dimen/_15dp"
+                android:textColor="?android:textColor"
+                app:layout_constraintStart_toStartOf="@+id/das1"
+                app:layout_constraintTop_toBottomOf="@+id/das1" />
+
+
+            <TextView
+                android:id="@+id/ds321a"
+                android:layout_width="@dimen/_280dp"
+                android:layout_height="@dimen/_50dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@color/grey"
+                android:padding="@dimen/_15dp"
+                android:textColor="?android:textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dsa" />
+
+
+            <TextView
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="@dimen/_50dp"
+                android:background="@color/grey"
+                android:padding="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:textColor="?android:textColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ds321a" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="@dimen/_160dp"
+                android:layout_height="@dimen/_50dp"
+                android:background="@color/grey"
+                android:padding="@dimen/_15dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginStart="@dimen/_10dp"
+                android:textColor="?android:textColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ds321a"
+                app:layout_goneMarginTop="@dimen/_20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
