@@ -38,7 +38,6 @@ public class Login_Activity extends AppCompatActivity {
             FragmentUtils.setFragment(manager, R.id.login_frameLayout, new Number_Verify_Fragment());
         }
 
-
     }
 
 }

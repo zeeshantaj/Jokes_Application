@@ -13,6 +13,8 @@
     <string name="save_post">Save Post</string>
     <string name="report_user">Report User</string>
     <string name="_8942">⋮</string>
+    <string name="termText">By tapping Sign in or Create account, you
+ agree to our Term of Service. Learn how we process your data in our Privacy Policy and Cookies Policy</string>
 
     <array name="emoji">
         <item>@drawable/funny_emoji</item>

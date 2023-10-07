@@ -47,8 +47,6 @@ public class OTP_Verification_Fragment extends Fragment {
     private FirebaseAuth auth;
     private TextView timer,resendTxt;
 
-    private LoginCallBack loginCallBack;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -128,16 +126,4 @@ public class OTP_Verification_Fragment extends Fragment {
         return view;
     }
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        if (context instanceof LoginCallBack) {
-            loginCallBack = (LoginCallBack) context;
-        } else {
-            throw new ClassCastException(context.toString() + " must implement LoginCallback");
-        }
-        loginCallBack.onStepChanged(2);
-        Log.e("MyApp","OTPFragment");
-
-    }
 }

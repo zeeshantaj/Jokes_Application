@@ -67,6 +67,7 @@
                 android:layout_marginEnd="@dimen/_15dp"
                 android:text="@string/_8942"
                 android:clickable="true"
+                android:textColor="@color/endColor"
                 android:textAppearance="?android:textAppearanceLarge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -120,8 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_bg"
-                    android:backgroundTint="@color/blue"
+                    android:background="@drawable/btn_bg_gradient"
                     android:layout_gravity="center"/>
 
                 <Button
@@ -129,7 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_6dp"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_bg"
+                    android:background="@drawable/btn_bg_gradient"
                     android:text="@string/share"
                     android:drawableTop="@drawable/share_icon"
                     android:textAllCaps="false"
