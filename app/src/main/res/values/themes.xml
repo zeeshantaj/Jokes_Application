@@ -17,4 +17,8 @@
         <item name="android:background">@drawable/bottom_sheet_design</item>
     </style>
 
+    <style name="TransparentBottomSheetTheme" parent="Theme.Design.BottomSheetDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
 </resources>

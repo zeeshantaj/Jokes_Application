@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.PROXIMITY_SCREEN_OFF_WAKE_LOCK" />
 
 
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -18,6 +20,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Jokes_Application"
         tools:targetApi="31">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.jokes_application.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@layout/joke_layout"/>
+    </provider>
+
         <activity
             android:name=".Activity.User_Profile_Activity"
             android:exported="false" />

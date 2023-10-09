@@ -67,7 +67,6 @@
                 android:layout_marginEnd="@dimen/_15dp"
                 android:text="@string/_8942"
                 android:clickable="true"
-                android:textColor="@color/endColor"
                 android:textAppearance="?android:textAppearanceLarge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -125,6 +124,7 @@
                     android:layout_gravity="center"/>
 
                 <Button
+                    android:id="@+id/postShareBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_6dp"

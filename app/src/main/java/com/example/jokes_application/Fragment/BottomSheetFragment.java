@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.fragment.app.DialogFragment;
 
 import com.example.jokes_application.Adapter.PostRecyclerAdapter;
 import com.example.jokes_application.Interfaces.BottomSheetListener;
@@ -26,12 +28,22 @@ public class BottomSheetFragment extends BottomSheetDialogFragment  {
 
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setStyle(DialogFragment.STYLE_NORMAL, R.style.TransparentBottomSheetTheme);
+
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view  =  inflater.inflate(R.layout.bottom_sheet_fragment, container, false);
 
-        Button saveBtn = view.findViewById(R.id.savePostBtn);
+
+        view.setBackgroundColor(Color.TRANSPARENT);
+
+        LinearLayout saveBtn = view.findViewById(R.id.savePostBtn);
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

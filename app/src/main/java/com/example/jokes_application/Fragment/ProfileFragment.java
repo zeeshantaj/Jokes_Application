@@ -106,12 +106,14 @@ public class ProfileFragment extends Fragment {
                     String imageUrl = snapshot.child("image").getValue(String.class);
                     DataSnapshot postSnapshot = snapshot.child("posts");
                     for (DataSnapshot dataSnapshot : postSnapshot.getChildren()) {
+                        String postID = dataSnapshot.getKey();
                         String joke = dataSnapshot.child("joke").getValue(String.class);
                         String postedDateTime = dataSnapshot.child("postedDateTime").getValue(String.class);
 
                         Post post = new Post();
                         post.setName(name);
                         post.setJoke(joke);
+                        post.setPostId(postID);
                         post.setImageUrl(imageUrl);
                         post.setPostedDateTime(postedDateTime);
                         Log.e("MyApp", "data" + post.getName());

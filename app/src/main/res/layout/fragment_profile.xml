@@ -9,6 +9,14 @@
     tools:context=".Fragment.ProfileFragment">
 
 
+    <ImageView
+        android:id="@+id/coverImmage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone"
+        android:background="@color/startColor"
+        android:scaleType="centerCrop"/>
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewProfile"
         android:layout_width="@dimen/_200dp"
@@ -16,6 +24,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/place_holder"
         app:civ_border_width="@dimen/_2dp"
+        android:layout_marginTop="@dimen/_20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
