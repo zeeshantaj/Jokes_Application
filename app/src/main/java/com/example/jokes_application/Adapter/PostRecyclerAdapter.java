@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -155,7 +157,7 @@ public class PostRecyclerAdapter extends RecyclerView.Adapter<PostRecyclerAdapte
         private CircleImageView imageView;
         private ReactButton reactButton;
         private Button shareBtn;
-
+        private CardView cardBackground;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.recyclerUserName);
@@ -165,6 +167,7 @@ public class PostRecyclerAdapter extends RecyclerView.Adapter<PostRecyclerAdapte
             imageView = itemView.findViewById(R.id.userImage);
             reactButton = itemView.findViewById(R.id.reactionBtn);
             shareBtn = itemView.findViewById(R.id.postShareBtn);
+            cardBackground = itemView.findViewById(R.id.cardView);
 
 
         }
@@ -173,6 +176,17 @@ public class PostRecyclerAdapter extends RecyclerView.Adapter<PostRecyclerAdapte
             name.setText(post.getName());
             joke.setText(post.getJoke());
             postedDateTime.setText(post.getPostedDateTime());
+
+            String retrievedColor = post.getBackgroundColor();
+            int color = Color.parseColor(retrievedColor);
+            cardBackground.setCardBackgroundColor(color);
+            cardBackground.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(context, "clicked", Toast.LENGTH_SHORT).show();
+                }
+            });
+
 
             Glide.with(context)
                             .load(post.getImageUrl())

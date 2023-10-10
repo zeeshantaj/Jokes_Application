@@ -84,11 +84,14 @@ public class HomeFragment extends Fragment implements BottomSheetListener {
                         String postId = dataSnapshot.getKey();
                         Log.e("MyApp","postID"+postId);
                         joke = dataSnapshot.child("joke").getValue(String.class);
+                        String backgroundColor = dataSnapshot.child("backgroundColor").getValue(String.class);
                         postedDateTime = dataSnapshot.child("postedDateTime").getValue(String.class);
 
                         Post post = new Post();
                         post.setName(name);
+
                         post.setJoke(joke);
+                        post.setBackgroundColor(backgroundColor);
                         post.setImageUrl(imageUrl);
                         post.setPostedDateTime(postedDateTime);
                         post.setUid(uid);

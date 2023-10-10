@@ -1,6 +1,7 @@
 package com.example.jokes_application.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SnapHelper;
 
@@ -58,6 +60,11 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
         Glide.with(context)
                 .load(post.getImageUrl())
                 .into(holder.imageView);
+
+
+        String backgroundColor = post.getBackgroundColor();
+        int color = Color.parseColor(backgroundColor);
+        holder.cardView.setCardBackgroundColor(color);
 
 
         FirebaseAuth auth = FirebaseAuth.getInstance();
@@ -115,6 +122,7 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
         private TextView name, joke, postedDateTime,optionMenu;
         private CircleImageView imageView;
         private ReactButton reactButton;
+        private CardView cardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -125,6 +133,7 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
             imageView = itemView.findViewById(R.id.userImage);
             reactButton = itemView.findViewById(R.id.reactionBtn);
             optionMenu = itemView.findViewById(R.id.optionMenuText);
+            cardView = itemView.findViewById(R.id.cardView);
 
 
             reactButton.setReactions(Post_Reactions.reactions);

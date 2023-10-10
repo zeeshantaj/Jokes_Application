@@ -10,4 +10,16 @@
     <color name="startColor">#B2ECB5</color>
     <color name="centerColor">#8ABA8C</color>
     <color name="endColor">#679A69</color>
+    <color name="post1">#F44336</color>
+    <color name="post2">#AD91DD</color>
+    <color name="post3">#44F6E6</color>
+    <color name="post4">#77B2BA</color>
+    <color name="post5">#ECD590</color>
+    <color name="post6">#CDDC39</color>
+    <color name="post7">#B9F179</color>
+    <color name="post8">#F89677</color>
+    <color name="post9">#009688</color>
+    <color name="post10">#9C27B0</color>
+    <color name="post11">#FF9800</color>
+
 </resources>

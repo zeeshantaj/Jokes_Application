@@ -2,7 +2,7 @@ package com.example.jokes_application.Model;
 
 public class Post {
 
-    private String name,imageUrl, joke,postedDateTime,uid,postId,reacted;
+    private String name,imageUrl, joke,postedDateTime,uid,postId,reacted,backgroundColor;
 
 //    public Post(){
 //
@@ -17,6 +17,14 @@ public class Post {
         this.imageUrl = imageUrl;
         this.joke = joke;
         this.postedDateTime = postedDateTime;
+    }
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
     }
 
     public String getPostId() {

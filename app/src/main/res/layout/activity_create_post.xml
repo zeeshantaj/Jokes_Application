@@ -21,7 +21,7 @@
         android:id="@+id/createPostUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:textColor="?android:textColor"
         android:textSize="@dimen/_18sp"
         android:textStyle="bold"
         android:singleLine="true"
@@ -33,12 +33,16 @@
     <EditText
         android:id="@+id/createPostEdittext"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_margin="@dimen/_10dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/create_post_bg"
+        android:backgroundTint="@color/startColor"
         android:hint="@string/write_here"
+        android:textColorHint="@color/black"
+        android:textColor="@color/white"
         android:inputType="textMultiLine"
-        android:maxLines="10"
+        android:maxLines="15"
+        android:gravity="top"
         android:minHeight="48dp"
         android:padding="@dimen/_10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,12 +54,142 @@
         android:id="@+id/postBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/btn_bg"
+        android:background="@drawable/btn_bg_gradient"
         android:text="@string/post"
+        android:textSize="@dimen/_18sp"
         android:layout_marginTop="@dimen/_10dp"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/createPostEdittext"
         app:layout_constraintStart_toStartOf="@+id/createPostEdittext"
         app:layout_constraintTop_toBottomOf="@+id/createPostEdittext" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor1"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/startColor"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor2"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post1"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor3"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post2"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor4"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardCornerRadius="@dimen/_5dp"
+                app:cardBackgroundColor="@color/post3"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor5"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post4"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor6"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post5"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor7"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post6"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor8"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post7"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor9"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post8"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor10"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post9"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor11"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post10"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/postColor12"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_margin="@dimen/_10dp"
+                app:cardBackgroundColor="@color/post11"
+                app:cardCornerRadius="@dimen/_5dp"
+                android:foreground="?android:selectableItemBackground"/>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
