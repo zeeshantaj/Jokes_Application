@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.jokes_application.Adapter.RequestAdapter;
 import com.example.jokes_application.Model.RequestModel;
 import com.example.jokes_application.R;
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +24,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,8 +50,6 @@ public class RequestFragment extends Fragment {
         requestModelList = new ArrayList<>();
         auth = FirebaseAuth.getInstance();
         currentUid = auth.getUid();
-
-
 
         requestReference = FirebaseDatabase.getInstance().getReference("FriendRequests");
         requestReference.addValueEventListener(new ValueEventListener() {
