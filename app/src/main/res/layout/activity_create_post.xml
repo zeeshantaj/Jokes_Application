@@ -64,6 +64,7 @@
         app:layout_constraintStart_toStartOf="@+id/createPostEdittext"
         app:layout_constraintTop_toBottomOf="@+id/createPostEdittext" />
 
+
     <HorizontalScrollView
         android:id="@+id/scrollHorizontal"
         android:layout_width="match_parent"
@@ -88,6 +89,7 @@
                 app:cardBackgroundColor="@color/startColor"
                 app:cardCornerRadius="@dimen/_5dp"
                 android:foreground="?android:selectableItemBackground"/>
+
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/postColor2"
@@ -187,9 +189,6 @@
                 app:cardBackgroundColor="@color/post11"
                 app:cardCornerRadius="@dimen/_5dp"
                 android:foreground="?android:selectableItemBackground"/>
-
-
         </LinearLayout>
-
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

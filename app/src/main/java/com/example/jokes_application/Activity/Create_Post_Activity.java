@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -229,8 +230,6 @@ public class Create_Post_Activity extends AppCompatActivity {
         });
 
     }
-
-
     private void changeEditTextBackgroundTint(int colorResId) {
         int color = ContextCompat.getColor(this, colorResId); // Get color from resources
         jokeText.setBackgroundTintList(ColorStateList.valueOf(color));
@@ -247,7 +246,6 @@ public class Create_Post_Activity extends AppCompatActivity {
             return "";
         }
     }
-
     @Override
     public boolean onSupportNavigateUp() {
         getOnBackPressedDispatcher().onBackPressed();
